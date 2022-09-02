@@ -1,0 +1,49 @@
+.table1{
+    width: 70%;
+    border-collapse:collapse ;
+    position: relative;
+    left:15%;
+   
+   }
+   .table2{
+     width: 70%;
+     border-collapse:collapse ;
+     position: relative;
+     left:15%;
+    
+    }
+   
+   table,th,td{
+     border: 2px solid dimgray;
+   }
+     
+   
+   th{
+     text-align: left;
+     font-size: 22px;
+     background-color:rgb(0, 217, 255) ;
+     color:white;
+   }
+   td{
+     font-size: 15px;
+     font-weight: bold;
+   
+   }
+   th,td{
+     padding: 10px;
+   
+   }
+   
+   .power{
+     position: relative;
+     left:37rem;
+     color: black;
+     font-weight: bold;
+     padding: 15px;
+     
+   }
+   .dropdn{
+     position:relative;
+     left:75%;
+   }
+   

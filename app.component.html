@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="app.component.css"> -->
+  </head>
+   
+  <body>
+    
+    <!-- DROPDOWN -->
+    <select (click)="selectdrop()" (change)="valueChangedforpumpDrive()" [(ngModel)]="selectedSN" class="dropdn">
+      <option>Machine Serial Number</option>
+      <option *ngFor="let items of finalDropDownArray">
+        <span>{{items}}</span>
+      </option>
+    </select>
+   
+   <!-- TABLE - 1 -->
+    <caption class="power">POWERGROUP</caption>
+    <table class="table1" >
+      <thead>
+      <tr>
+        <th>Part Number</th>
+        <th colspan="4"> Description</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody id="appendedbanner">
+      <tr>
+        <td>Kit No : </td>
+        <td>Engine Installation :</td>
+        <td>Power Group Installation :</td>
+        <td>EngineMounting Group :</td>
+        <td>Compressor Group:</td>
+        <td>Quantity</td>
+      </tr>
+       <tr *ngFor="let pg of powerGroupFiltered" >
+        <td>{{pg.Kit_Number}}</td>
+        <td>{{pg.Engine_Installation}}</td>
+        <td>{{pg.Power_Group_Installation}}</td>
+        <td>{{pg.Engine_Mounting_Group}}</td>
+        <td>{{pg.Compressor_Group}}</td>
+        <td > <div class=""><button class="btnminus"  type="button" id="minus#currentRow#" (click)="minus()" >-</button>
+          <input type="text" id="quantity#currentRow#" [value]="quantity" size="3"  >
+          <button class="btnplus" type="button" id="plus#currentRow#" (click)="plus()" (click)="gotopage('cart')" >+</button>
+       </div>
+        </td> 
+        
+       
+       </tr></tbody>
+        </table>
+      
+        <br><br>
+        <!-- TABLE - 2 -->
+       <caption  class="power">PUMPDRIVE</caption>
+    <table class="table2">
+      <tr>
+        <th>Part Number</th>
+        <th colSpan="2" > Description</th>
+        <th>Quantity</th>
+      </tr>
+      <tr>
+        <td>Kit No:</td>
+        <td>Kit Name:</td>
+        <td>Pump Drive Installation:</td>
+        <td>Quantity</td>
+        </tr>
+        <tr *ngFor="let pd of pumpDriveFiltered">
+          <td>{{pd.Kit_Number}}</td>
+          <td>{{pd.Kit_Name}}</td>
+          <td>{{pd.Pump_Drive_Installation}}</td>
+          <td><div><button class="btn minus-btn" (click)="minus()"  type="button" >-</button>
+            <input type="text" [value]="quantity" size="5">
+            <button class="btn plus-btn" (click)="plus()" type="button" >+</button>
+            </div>
+          </td>
+          
+        </tr>
+    </table> -->
+    <!-- <button (click)="gotopage('cart')" type="button" >click here</button> -->
+  
+  </body>
+</html>
